@@ -1,19 +1,271 @@
-/* Apply a style to the entire body */
 body {
-    font-family: Arial, sans-serif;
+    padding-top: 80px; /* nebo 100px podle výšky lišty a estetického pocitu */
+    font-family: DM Sans, sans-serif;
     margin: 40px;
-    background-color: #f4f4f4;
+    background-color: #F6DBDD;
 }
 
-/* Style for the H1 heading */
-h1 {
+.top-menu {
+    position: fixed;      /* drží nahoře */
+    top: 10px;
+    left: 7.5%;
+    width: 85%;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.45); /* průhledné pozadí */
+    backdrop-filter: blur(12px);           /* ROZMAZÁNÍ pozadí za lištou */
+    -webkit-backdrop-filter: blur(12px);   /* Safari */
+
+    border-radius: 30px;                   /* jemné zaoblení, jako na screenu */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* jemný vnější stín */
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* položky doprostřed */
+    gap: 40px;               /* mezery mezi položkami */
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu li a {
+    text-decoration: none;
+    color: #333366;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.top-menu li a:hover {
+    background: #F2F1EF;
+}
+
+.hlavicka {
+    padding: 150px 30px;
+    background-image: url(pictures/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+}
+
+h1, h2 {
     color: #333366; /* Dark blue color */
-    border-bottom: 2px solid #333366;
     padding-bottom: 10px;
 }
 
-/* Style for the paragraph */
 p {
-    color: #555555; /* Gray color */
+    color: #333366; /* Dark blue color */
     line-height: 1.6;
+}
+
+section {
+  margin: 34px 0;
+  padding: 48px;
+  border: 1px solid rgba(22,28,37,0.03);
+  background-color: #FCFBFA;
+  border-radius: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+li {
+    margin-bottom: 8px;
+    color: #333366; /* Dark blue color */
+}
+
+.omne {
+    /* přepneme sekci do dvou sloupců */
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+
+    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin: 60px 0;
+}
+
+/* levý blok – karta s textem */
+.omnecontent {
+    flex: 1 1 55%;
+    padding: 48px;
+    background-color: #FCFBFA;
+    border-radius: 24px;
+    border: 1px solid rgba(22,28,37,0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* pravý blok – fotka */
+.omneimage {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.omneimage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+    object-fit: cover;
+}
+
+.scimtipomuzu {
+    /* přepneme sekci do dvou sloupců */
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+
+    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin: 60px 0;
+}
+
+/* levý blok – karta s textem */
+.scimtipomuzucontent {
+    flex: 1 1 55%;
+    padding: 48px;
+    background-color: #FCFBFA;
+    border-radius: 24px;
+    border: 1px solid rgba(22,28,37,0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* pravý blok – fotka */
+.scimtipomuzuimage {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scimtipomuzuimage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+    object-fit: cover;
+}
+
+.cojekoucovani {
+    /* přepneme sekci do dvou sloupců */
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+
+    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin: 60px 0;
+}
+
+/* levý blok – karta s textem */
+.cojekoucovanicontent {
+    flex: 1 1 55%;
+    padding: 48px;
+    background-color: #FCFBFA;
+    border-radius: 24px;
+    border: 1px solid rgba(22,28,37,0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* pravý blok – fotka */
+.cojekoucovaniimage {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cojekoucovaniimage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+    object-fit: cover;
+}
+
+.spolupraceacenik {
+    /* přepneme sekci do dvou sloupců */
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+
+    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin: 60px 0;
+}
+
+/* levý blok – karta s textem */
+.spolupraceacenikcontent {
+    flex: 1 1 55%;
+    padding: 48px;
+    background-color: #FCFBFA;
+    border-radius: 24px;
+    border: 1px solid rgba(22,28,37,0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* pravý blok – fotka */
+.spolupraceacenikimage {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spolupraceacenikimage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888888;
+    font-size: 14px;
+}
+
+/* ---------- responzivita pro mobily / menší šířku ---------- */
+@media (max-width: 900px) {
+    .omne {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .omnecontent {
+        padding: 32px;
+    }
+
+    .omneimage img {
+        max-width: 260px;
+    }
+
+    .omneimage {
+        justify-content: center;
+    }
 }
