@@ -5,12 +5,15 @@ body {
     background-color: #F6DBDD;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .top-menu {
     position: fixed;      /* drží nahoře */
     top: 10px;
     left: 7.5%;
-    width: 85%;
-    height: 70px;
+    width: 85%;    
     background: rgba(255, 255, 255, 0.45); /* průhledné pozadí */
     backdrop-filter: blur(12px);           /* ROZMAZÁNÍ pozadí za lištou */
     -webkit-backdrop-filter: blur(12px);   /* Safari */
@@ -18,10 +21,6 @@ body {
     border-radius: 30px;                   /* jemné zaoblení, jako na screenu */
     box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* jemný vnější stín */
     z-index: 1000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .top-menu ul {
@@ -31,6 +30,9 @@ body {
     gap: 40px;               /* mezery mezi položkami */
     margin: 0;
     padding: 0;
+    overflow-x: auto;
+    height: 70px;
+    align-items: center;
 }
 
 .top-menu li a {
@@ -40,6 +42,7 @@ body {
     padding: 8px 12px;
     border-radius: 8px;
     transition: 0.2s;
+    white-space: nowrap;
 }
 
 .top-menu li a:hover {
@@ -83,7 +86,7 @@ li {
     color: #333366; /* Dark blue color */
 }
 
-.omne {
+.layout_image {
     /* přepneme sekci do dvou sloupců */
     display: flex;
     align-items: stretch;
@@ -98,8 +101,8 @@ li {
 }
 
 /* levý blok – karta s textem */
-.omnecontent {
-    flex: 1 1 55%;
+.layout_image-content {
+    width: 70%;
     padding: 48px;
     background-color: #FCFBFA;
     border-radius: 24px;
@@ -108,141 +111,22 @@ li {
 }
 
 /* pravý blok – fotka */
-.omneimage {
-    flex: 1 1 45%;
+.layout_image-image {
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.omneimage img {
-    max-width: 100%;
+.layout_image-image img {
+    width: 100%;
     height: auto;
     border-radius: 24px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.16);
-    object-fit: cover;
+    object-fit: cover;    
+    object-position: center;
 }
-
-.scimtipomuzu {
-    /* přepneme sekci do dvou sloupců */
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 40px;
-
-    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
-    padding: 0;
-    border: none;
-    background: transparent;
-    margin: 60px 0;
-}
-
-/* levý blok – karta s textem */
-.scimtipomuzucontent {
-    flex: 1 1 55%;
-    padding: 48px;
-    background-color: #FCFBFA;
-    border-radius: 24px;
-    border: 1px solid rgba(22,28,37,0.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-}
-
-/* pravý blok – fotka */
-.scimtipomuzuimage {
-    flex: 1 1 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.scimtipomuzuimage img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
-    object-fit: cover;
-}
-
-.cojekoucovani {
-    /* přepneme sekci do dvou sloupců */
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 40px;
-
-    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
-    padding: 0;
-    border: none;
-    background: transparent;
-    margin: 60px 0;
-}
-
-/* levý blok – karta s textem */
-.cojekoucovanicontent {
-    flex: 1 1 55%;
-    padding: 48px;
-    background-color: #FCFBFA;
-    border-radius: 24px;
-    border: 1px solid rgba(22,28,37,0.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-}
-
-/* pravý blok – fotka */
-.cojekoucovaniimage {
-    flex: 1 1 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cojekoucovaniimage img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
-    object-fit: cover;
-}
-
-.spolupraceacenik {
-    /* přepneme sekci do dvou sloupců */
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 40px;
-
-    /* přepíšeme obecný styl sekce (ten, co dává padding a rámeček) */
-    padding: 0;
-    border: none;
-    background: transparent;
-    margin: 60px 0;
-}
-
-/* levý blok – karta s textem */
-.spolupraceacenikcontent {
-    flex: 1 1 55%;
-    padding: 48px;
-    background-color: #FCFBFA;
-    border-radius: 24px;
-    border: 1px solid rgba(22,28,37,0.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-}
-
-/* pravý blok – fotka */
-.spolupraceacenikimage {
-    flex: 1 1 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.spolupraceacenikimage img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.16);
-    object-fit: cover;
-}
-
+ 
 footer {
     text-align: center;
     padding: 20px;
@@ -250,22 +134,51 @@ footer {
     font-size: 14px;
 }
 
+/* ---------- scroll margin pro kotvy a hladké scrollování ---------- */
+:root {
+    --nav-offset: 110px; /* výška tvé lišty + nějaká mezera */
+}
+
+#omne,
+#scimtipomuzu,
+#cojekoucovani,
+#spolupraceacenik,
+#kontakt {
+    scroll-margin-top: var(--nav-offset);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------- responzivita pro mobily / menší šířku ---------- */
 @media (max-width: 900px) {
-    .omne {
+    body {
+        margin: 10px;
+    }
+
+    .top-menu ul {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .layout_image {
         flex-direction: column;
         gap: 24px;
     }
 
-    .omnecontent {
-        padding: 32px;
+    .layout_image-content {
+        padding: 20px 40px;
+        width: 100%;
+        order: 2;
     }
 
-    .omneimage img {
-        max-width: 260px;
+    .layout_image-image {
+        width: 100%;        
+        order: 1;
     }
 
-    .omneimage {
-        justify-content: center;
+    .layout_image-image img {
+        height: 200px;
     }
 }
